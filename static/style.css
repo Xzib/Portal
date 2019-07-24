@@ -1,0 +1,19 @@
+#Main_Conatainer{
+    margin-top: 10%;
+}
+.box{
+    margin-top: 10px;
+    font-size: 28px;
+    color: indigo;
+   
+}
+.subheading{
+    font-size: 18px;
+    font-weight: bolder;
+    color: blueviolet;
+}
+.text{
+    font-size: 10px;
+    font-style: italic;
+    text-decoration: underline;
+}

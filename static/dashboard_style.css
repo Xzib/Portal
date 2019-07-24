@@ -1,0 +1,10 @@
+.side_bar{
+    float: left; 
+    background-color: blueviolet;
+    height: 700px;
+    
+}
+.side_bar>ul{
+    text-decoration: none;
+    
+}

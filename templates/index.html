@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+{% endblock %}
+
+
+{% block title %} 
+
+Portal | Sign in 
+
+{% endblock %}
+
+
+
+{% block body  %} 
+
+<!--Main container starts-->
+<div class="container text-center" id="Main_Conatainer">
+    
+        <!--Artistic LOGO-->
+    <div class="row">   
+            <div class="col-sm">
+                    <img src="static/images/artistic_logo.jpg" width="200" height="75" alt="Artistic Logo">
+            </div>
+            
+        </div>
+        <!--Artistic LOGO ends-->
+        <div class="container col-7 text-center box">
+            <!--Sign in text starts-->
+            <div class="row">
+                    <div class="col-sm subheading">
+                        Sign In
+                    </div>     
+            </div>
+
+            <!--Sign in text ends-->
+            <!--Welcome Text-->
+            <div class="row">
+                    <div class="col-sm">
+                        Welcome
+                    </div>     
+            </div>
+            <hr>
+            <!--Sign In form starts-->
+            <form action="{{ url_for('dashboard') }}">
+                <div class="form-row p-1">
+                    <div class="col-5 mx-auto">
+                        <input name="email" class="form-control text-center" 
+                        type="email" placeholder="Enter your Email">
+                    </div>
+                </div>
+                <div class="form-row mt-1 p-1">
+                        <div class="col-5 mx-auto">
+                            <input name="password" class="form-control text-center" 
+                            type="password" placeholder="Enter your password">
+                        </div>
+                </div>
+                <div class="form-row">
+                        <div class="col-2 mx-auto">
+                           <a href="#" class="text">Forgot Password?</a> 
+                        </div>
+                </div>
+                <div class="form-row mt-1 p-2">
+                        <div class="col-2 mx-auto">
+                            <button name="sign_in" type="submit" class="btn btn-primary">Sign In</button>                        </div>
+                </div>
+            </form>       
+            </div>
+            <!--Sign In form ends-->
+    
+    
+</div>
+<!--Main container ends-->
+
+
+{% endblock %}
