@@ -16,20 +16,24 @@ Portal | Dashboard
 
 {% block body %}
 <div class="container">
-    <div class="col-2" id="side_bar">
+    <div class="col-3 mt-3" id="side_bar">
+        <div class="text-center"><a href="#"><img src="static/images/artistic_logo.jpg" width="100" height="50"></a></div>
+        <div class="text-center side_bar_seperators"> YOU</div>
         <ul>
-            <li><img src="static/images/artistic_logo.jpg" width="100" height="50"></li>
-            <li>Dashboard</li>
-            <li>Me</li>
-            <li>Time Off</li>
-            <li>My documents</li>
-            
+            <li><a href="#"><div class="item_wrap"><i class="fas fa-tachometer-alt"></i> Dashboard</div></a></li>
+            <li><a href="#"><div class="item_wrap"><i class="far fa-id-badge"></i> Me</div></a></li>
+            <li><a href="#"><div class="item_wrap"><i class="far fa-map"></i> Time Off</div></a></li>
+            <li><a href="#"><div class="item_wrap"><i class="fas fa-file"></i> Documents</div></a></li>
         </ul>
-
-
+        <div class="text-center side_bar_seperators"> Company</div>
+        <ul>
+                <li><a href="#"><div class="item_wrap"><i class="fas fa-users"></i> Employees</div></a></li>
+                <li><a href="#"><div class="item_wrap"><i class="far fa-calendar-alt"></i> Calender</div></a></li>
+                <li><a href="#"><div class="item_wrap"><i class="fas fa-hourglass-half"></i> Time Tracking</div></a></li>
+                <li><a href="#"><div class="item_wrap"><i class="fas fa-folder"></i> Company Files</div></a></li>
+                <li><a href="#"><div class="item_wrap"><i class="far fa-chart-bar"></i> Reports</div></a></li>
+        </ul>
     </div>
-
-
 </div>
 
 {% endblock %}
