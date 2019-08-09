@@ -1,52 +1,96 @@
 {% extends "dashboardlayout.html" %}
 
 {% block pagecontent %}
-    <!--First row-->
-    <div class="row">
-        
-        <div class="col-8">
-                <div class="row">
-                        <div class="col-4" id="Welcome-tag">
-                            <p class="heading-text">Welcome Back</p>
-                            <p class="heading-text">Zohaib Ali</p>
-                            <p class="normal-text">Here's Whats new in AM</p>
-
-                
-                        </div>
-                        <div class=" col-4 normal-box ">
-                           
-                        </div>
+    
+    <div class="container">
+            <!--First row-->
+            <div class="row no-gutters"> 
+                    <div class="col-8 mx-0"><!--R1C1-8-->
+                            <div class="row no-gutters">
+                                    <div class="col-5 mx-4" id="Welcome-tag">
+                                        <p class="heading-text">Welcome Back</p>
+                                        <p class="heading-text">Zohaib Ali</p>
+                                        <p class="normal-text">Here's Whats new in AM</p>
+                                    </div>
+                                    <div class=" col-5 mx-4 normal-box leave-box">
+                                        <div class="text-center">
+                                            NEXT ABSENCES
+                                        </div>
+                                        <hr>
+                                        <div>
+                                            <i class="fas fa-bell fa-5x" style="color: orange"></i>
+                                        </div>
+                                        <div class="text-center" style="font-style:italic; font-weight:lighter">
+                                            There are no absences planned 
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="row no-gutters">
+                                    <div class=" col-5 mx-4 normal-box leave-box ">
+                                            <div class="text-center" style="font-weight: bold">
+                                                    NEXT EVENTS
+                                                </div>
+                                                <hr>
+                                                <div stlye="margin: auto;">
+                                                    There are no team events, 
+                                                    if you are having any team lunch soon it may be a good moment to create one.   
+                                                </div>
+                                                <hr>
+                                                <div class="text-center" style="margin-top:10px;">
+                                                    <a href="#"> Create Event</a>
+                                                </div>
+                                        
+                                    </div>
+                                    <div class=" col-5 mx-4 normal-box leave-box">
+                                            <div class="text-center" style="font-weight: bold">
+                                                    NEXT HOLIDAYS
+                                                </div>
+                                                <hr>
+                                                <div stlye="margin: auto;">
+                                                        <i class="fas fa-calendar-week fa-4x"></i>   
+                                                </div>
+                                                <hr>
+                                                <div class="text-center" style="margin-top:10px;">
+                                                    <a href="#"> Check on calenders</a>
+                                                </div>
+                                    </div>
+                            </div>
+                    </div> <!--R1C1-8-->
+                    
+                    <div class="col-4 mx-0" id="side-box"> <!--R1C2-4-->
+                                    <div class="col-md-12">
+                                           <div class="text-center" style="font-weight: bold">
+                                                   PENDING TASKS
+                                               </div>
+                                               <hr>
+                                               <div stlye="margin: auto;">
+                                                       <i class="fas fa-mug-hot fa-7x" style="color: gray"></i>
+                                               </div>
+                                               <div class="text-center" style="margin-top:10px;">
+                                                   There is nothing pending. Go grab a cup of tea.
+                                               </div>
+                                           </div>
+                                    </div>
+                    </div> <!--R1C2-4-->      
+                       
+                </div><!--First row ends-->
+                <!--second row-->
+                <div class="row no-gutter">
+                    <div class="col-2 box">
+            
+                    </div>
+                    <div class="col-2 box">
+            
+                    </div>
+                    <div class="col-2 box">
+            
+                    </div>
+                    <div class="col-2 box">
+            
+                    </div>
+            
                 </div>
-                <div class="row">
-                        <div class=" col-4 normal-box ">
                 
-                        </div>
-                        <div class=" col-4 normal-box ">
-                           
-                        </div>
-                </div>
-        </div>
-       
-         
-         <div class="col-3" id="side-box">
-        
-         </div>
-
-    </div>
-    <!--second row-->
-    <div class="row no-gutter">
-        <div class="col-2 box">
-
-        </div>
-        <div class="col-2 box">
-
-        </div>
-        <div class="col-2 box">
-
-        </div>
-        <div class="col-2 box">
-
-        </div>
 
     </div>
     

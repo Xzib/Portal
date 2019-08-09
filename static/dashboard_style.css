@@ -7,7 +7,7 @@ body{
     position: relative;
     float: left; 
     height: 700px;
-    background-color: blue; 
+    
     
 }
 #side_bar li{
@@ -58,9 +58,9 @@ body{
     box-shadow: 0 1px 5px rgba(0,0,0,0.1);
     text-align: center;
     border-radius:0.5rem;
-    width: 3rem;
-    height:12rem;
-    margin-left: 50px;
+    width: 8rem;
+    height:14rem;
+    margin-left: 10px;
 }
 .heading-text{
     font-weight: bold;
@@ -77,25 +77,26 @@ body{
     padding: 20px;
     box-shadow: 0 1px 5px rgba(0,0,0,0.1);
     text-align: center;
-    background-color: #7C73E6;
+    background-image: linear-gradient(-90deg,rgba(124, 115, 230, 1),rgba(116,168,230,1)) ;
     opacity: 20;
     color: white;
     border-radius: 0.5rem;
-    margin-left: 50px;
+    margin-left: 10px;
 
 }
 #side-box{
     margin-top: 6px;
     background: #fff;
     border: solid 1px #e6e6e6;
+    border-top: solid 3px gray;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 0px;
     box-shadow: 0 1px 5px rgba(0,0,0,0.1);
     text-align: center;
     border-radius:0.5rem;
     width: 3rem;
-    height:24.5rem;
-    margin-left:15px;
+    height:28.5rem;
+    margin-left:0px;
 }
 .box{
     margin-top: 6px;
@@ -109,6 +110,19 @@ body{
     margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
-    
+}
+
+.leave-box{
+    border-top: 3px solid lightgreen;
+    font-size: 14px;
+    font-weight: bold;
+}
+.padding-0{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.margin-0{
+    margin-left: 0;
+    margin-right: 0
 
 }
