@@ -43,7 +43,27 @@ while input_val != 'q':
                 find_record = collection.find_one({"Employee_Code" : query})
                 if find_record == None:
                     print(f"\n\n Succesfully deleted Employee_Code: {query} ")
-        
+        input("\n\npress Enter key to continue: ")
+        input_val = prompt_helper()
+    elif input_val == "u":
+        query = input("Enter Employee code: ")
+        find_record = collection.find_one({"Employee_Code": query})
+        if find_record == None:
+            print("\n\nEmployee Code: {0}, does not exist in the database".format(query))
+        else:
+            input("press enter to create new fields")
+            check = " "
+            while check != "q":
+                key = input("Enter new field name: ")
+                val = input("Enter Value for {0}".format(key))
+                collection.update(
+                                        { "Employee_Code": query},
+                                        { '$set': 
+                                                {key:val}
+                                        }
+
+                                        )
+                input("Press q to quit any other key to add another field ").lower()
         input("\n\npress Enter key to continue: ")
         input_val = prompt_helper()
 
