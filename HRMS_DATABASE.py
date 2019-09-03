@@ -26,8 +26,24 @@ while input_val != 'q':
         input_val = prompt_helper()
     elif input_val == "f":
         query = input("Enter Employee code: ")
-        find_result = collection.find_one({"Employee_Code" : query})
-        pprint.pprint(find_result)
-        input("press any Enter key to continue: ")
+        find_record = collection.find_one({"Employee_Code" : query})
+        pprint.pprint(find_record)
+        input("press Enter key to continue: ")
+        input_val = prompt_helper()
+    elif input_val == "d":
+        query = input("Enter Employee code: ")
+        find_record = collection.find_one({"Employee_Code" : query})
+        if find_record == None:    
+            print("\n\nEmployee Code does not exist")
+        else:
+            pprint.pprint(find_record)
+            check = input("\n\nAre you sure you want to delete the Employee [y/n]: ").lower()
+            if check == 'y':
+                delete_record = collection.delete_one({"Employee_Code" : query})
+                find_record = collection.find_one({"Employee_Code" : query})
+                if find_record == None:
+                    print(f"\n\n Succesfully deleted Employee_Code: {query} ")
+        
+        input("\n\npress Enter key to continue: ")
         input_val = prompt_helper()
 
