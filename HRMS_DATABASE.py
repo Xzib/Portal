@@ -51,19 +51,33 @@ while input_val != 'q':
         if find_record == None:
             print("\n\nEmployee Code: {0}, does not exist in the database".format(query))
         else:
-            input("press enter to create new fields")
+            val = input("press 'c' to create new fields OR Press 'u' to update existing field: ").lower()
             check = " "
-            while check != "q":
-                key = input("Enter new field name: ")
-                val = input("Enter Value for {0}".format(key))
-                collection.update(
-                                        { "Employee_Code": query},
-                                        { '$set': 
-                                                {key:val}
-                                        }
+            if val == 'c':
+                while check != "q":
+                    key = input("Enter new field name: ")
+                    val = input("Enter Value for {0}: ".format(key))
+                    collection.update(
+                                            { "Employee_Code": query},
+                                            { '$set': 
+                                                    {key:val}
+                                            }
 
-                                        )
-                input("Press q to quit any other key to add another field ").lower()
+                                            )
+                    input("Press q to quit any other key to add another field ").lower()
+            elif val == 'u':
+                while check != 'q':
+                    for k, v in find_record.items():
+                        print(f"{k} : {v}" )
+                    key = input("Enter name of the field you want to update: ")
+                    val = input("Enter Value for {0}: ".format(key))
+                    collection.update_one(
+                        {"Employee_Code": query},
+                        {
+                            '$set':{key : val}
+                        }
+                    )
+                    check = input("Press q to quit any other key to add another field ").lower()
         input("\n\npress Enter key to continue: ")
         input_val = prompt_helper()
 
